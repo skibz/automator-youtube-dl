@@ -1,6 +1,8 @@
 
 # automator-youtube-dl
 
+> non-programmer friendly interface to youtube-dl (macos only)
+
 to make modifications to this application, open it with automator and hack away! the shell script powering the app is as follows:
 
 ```bash
