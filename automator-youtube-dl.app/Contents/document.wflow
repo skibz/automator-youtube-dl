@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMApplicationBuild</key>
+	<string>419</string>
+	<key>AMApplicationVersion</key>
+	<string>2.6</string>
+	<key>AMDocumentVersion</key>
+	<string>2</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.string</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.1.1</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+					<string>TextEdit</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>buttonAffirmative</key>
+					<dict/>
+					<key>buttonNegative</key>
+					<dict/>
+					<key>defaultAnswer</key>
+					<dict/>
+					<key>defaultMessage</key>
+					<dict>
+						<key>tokenizedValue</key>
+						<array>
+							<string>Enter the URL to your YouTube playlist</string>
+						</array>
+					</dict>
+					<key>requireInput</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.string</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Ask for Text.action</string>
+				<key>ActionName</key>
+				<string>Ask for Text</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>buttonAffirmative</key>
+					<string>OK</string>
+					<key>buttonNegative</key>
+					<string>Cancel</string>
+					<key>defaultAnswer</key>
+					<string></string>
+					<key>defaultMessage</key>
+					<string>Enter the URL to your YouTube playlist</string>
+					<key>requireInput</key>
+					<true/>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.TextInputDialog</string>
+				<key>CFBundleVersion</key>
+				<string>1.1.1</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<true/>
+				<key>CanShowWhenRun</key>
+				<false/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryText</string>
+				</array>
+				<key>Class Name</key>
+				<string>AMAskForTextAction</string>
+				<key>InputUUID</key>
+				<string>51A58960-F2B1-48D4-82AF-318CCD7A0EC0</string>
+				<key>Keywords</key>
+				<array>
+					<string>Text</string>
+					<string>Ask</string>
+					<string>Prompt</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>7DBD1C97-1D36-4D49-A1CF-9B5BD1F3FE87</string>
+				<key>UUID</key>
+				<string>2E435FEA-BE61-462E-8D71-DE485E264405</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+					<string>TextEdit</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>defaultAnswer</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<string>OK</string>
+						<key>name</key>
+						<string>buttonAffirmative</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>defaultMessage</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>2</string>
+					</dict>
+					<key>3</key>
+					<dict>
+						<key>default value</key>
+						<string>Cancel</string>
+						<key>name</key>
+						<string>buttonNegative</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>3</string>
+					</dict>
+					<key>4</key>
+					<dict>
+						<key>default value</key>
+						<false/>
+						<key>name</key>
+						<string>requireInput</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>4</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<false/>
+				<key>location</key>
+				<string>527.000000:112.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Ask for Text.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<false/>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>v.1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>variableUUID</key>
+					<dict>
+						<key>isPathPopUp</key>
+						<false/>
+						<key>selectedVariableUUID</key>
+						<string>C85DA8CC-F732-4C2D-994A-17234953AF65</string>
+					</dict>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Set Value of Variable.action</string>
+				<key>ActionName</key>
+				<string>Set Value of Variable</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>variableUUID</key>
+					<string>C85DA8CC-F732-4C2D-994A-17234953AF65</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Set_Value_of_Variable</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<true/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>Set_Value_of_Variable</string>
+				<key>InputUUID</key>
+				<string>3C109520-8617-4C85-84D1-AB4C111F318C</string>
+				<key>Keywords</key>
+				<array>
+					<string>variable</string>
+					<string>binding</string>
+					<string>input</string>
+					<string>output</string>
+					<string>storage</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>663413CE-8E19-4F85-AC98-18B68C8824B6</string>
+				<key>UUID</key>
+				<string>FE6D0374-436A-4CB0-BB1C-36DDF8A5A51E</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>variableUUID</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<false/>
+				<key>location</key>
+				<string>527.000000:154.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Set Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.string</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>2.0.3</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>COMMAND_STRING</key>
+					<dict/>
+					<key>CheckedForUserDefaultShell</key>
+					<dict/>
+					<key>inputMethod</key>
+					<dict/>
+					<key>shell</key>
+					<dict/>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.string</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run Shell Script.action</string>
+				<key>ActionName</key>
+				<string>Run Shell Script</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>COMMAND_STRING</key>
+					<string>
+# allocate some vars for later
+playlist=$1
+output_dir="playlist-$(date +%s)"
+ffmpeg_url=http://www.ffmpegmac.net/resources/SnowLeopard_Lion_Mountain_Lion_Mavericks_Yosemite_El-Captain_28.11.2016.zip
+
+# create and switch to our workspace
+cd ~/Desktop
+mkdir -p youtube
+cd youtube
+
+# make things a little easier
+PATH=$PATH:$PWD
+
+# ensure ffmpeg is present
+[[ ! -f ffmpeg ]] &amp;&amp; {
+	rm ffmpeg ffprobe ffserver || true
+	curl --silent -L $ffmpeg_url -o ffmpeg.zip || {
+		say "unable to download f f m peg archive, exiting!"
+		exit 1
+	}
+	tar -xf ffmpeg.zip &amp;&amp; rm ffmpeg.zip || {
+		say "unable to extract f f m peg archive, exiting!"
+		exit 1
+	}
+}
+
+# ensure youtube-dl is present
+[[ ! -f youtube-dl ]] &amp;&amp; {
+	curl --silent -L https://yt-dl.org/downloads/latest/youtube-dl -o youtube-dl || {
+		say "unable to download you tube d l, exiting!"
+		exit 1
+	}
+	chmod a+rx youtube-dl || {
+		say "unable to make you tube d l executable, exiting!"
+		exit 1
+	}
+}
+
+# create the output dir
+mkdir $output_dir || {
+	say "unable to create output directory, exiting!"
+	exit 1
+}
+
+cd $output_dir || {
+	say "unable to change to output directory, exiting!"
+	exit 1
+}
+
+say "beginning you tube play list download, please wait..."
+
+# attempt to download and transcode the given url
+youtube-dl \
+	--prefer-ffmpeg \
+	--quiet \
+	--no-warnings \
+	--no-progress \
+	--ignore-errors \
+	--no-color \
+	--yes-playlist \
+	--no-call-home \
+	--extract-audio \
+	--audio-format="mp3" \
+	--output="%(title)s.%(ext)s" \
+	-- $playlist || {
+		say "you tube play list download failed!"
+		exit 1
+	}
+
+say "you tube play list download complete!"
+open $output_dir
+exit 0</string>
+					<key>CheckedForUserDefaultShell</key>
+					<true/>
+					<key>inputMethod</key>
+					<integer>1</integer>
+					<key>shell</key>
+					<string>/bin/bash</string>
+					<key>source</key>
+					<string></string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.RunShellScript</string>
+				<key>CFBundleVersion</key>
+				<string>2.0.3</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunShellScriptAction</string>
+				<key>InputUUID</key>
+				<string>80DA5156-627A-40AD-A5F8-299533BB2332</string>
+				<key>Keywords</key>
+				<array>
+					<string>Shell</string>
+					<string>Script</string>
+					<string>Command</string>
+					<string>Run</string>
+					<string>Unix</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>DF6BFBAC-D533-4FCE-B68D-A87132B89417</string>
+				<key>UUID</key>
+				<string>2875527E-C6C3-422F-9B35-453E39A08CDC</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<integer>0</integer>
+						<key>name</key>
+						<string>inputMethod</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>default value</key>
+						<false/>
+						<key>name</key>
+						<string>CheckedForUserDefaultShell</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>2</string>
+					</dict>
+					<key>3</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>COMMAND_STRING</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>3</string>
+					</dict>
+					<key>4</key>
+					<dict>
+						<key>default value</key>
+						<string>/bin/sh</string>
+						<key>name</key>
+						<string>shell</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>4</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>527.000000:796.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+	</array>
+	<key>connectors</key>
+	<dict>
+		<key>4EAAF08C-C3C4-40E8-AD11-719DE4ED8874</key>
+		<dict>
+			<key>from</key>
+			<string>2E435FEA-BE61-462E-8D71-DE485E264405 - 2E435FEA-BE61-462E-8D71-DE485E264405</string>
+			<key>to</key>
+			<string>FE6D0374-436A-4CB0-BB1C-36DDF8A5A51E - FE6D0374-436A-4CB0-BB1C-36DDF8A5A51E</string>
+		</dict>
+		<key>777B88F4-52B2-459D-9DCA-04ADE994EC26</key>
+		<dict>
+			<key>from</key>
+			<string>FE6D0374-436A-4CB0-BB1C-36DDF8A5A51E - FE6D0374-436A-4CB0-BB1C-36DDF8A5A51E</string>
+			<key>to</key>
+			<string>2875527E-C6C3-422F-9B35-453E39A08CDC - 2875527E-C6C3-422F-9B35-453E39A08CDC</string>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<array>
+		<dict>
+			<key>UUID</key>
+			<string>C85DA8CC-F732-4C2D-994A-17234953AF65</string>
+			<key>identifier</key>
+			<string>com.apple.Automator.Variable.Storage</string>
+			<key>name</key>
+			<string>playlist</string>
+		</dict>
+		<dict>
+			<key>UUID</key>
+			<string>2036E9F5-28B8-45CA-9555-C9A7825F4417</string>
+			<key>identifier</key>
+			<string>com.apple.Automator.Variable.Storage</string>
+			<key>name</key>
+			<string>output_dir</string>
+		</dict>
+	</array>
+	<key>workflowMetaData</key>
+	<dict>
+		<key>workflowTypeIdentifier</key>
+		<string>com.apple.Automator.application</string>
+	</dict>
+</dict>
+</plist>
