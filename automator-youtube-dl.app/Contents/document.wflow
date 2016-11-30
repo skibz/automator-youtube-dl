@@ -341,78 +341,80 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>
-# allocate some vars for later
+					<string>declare canopen
+declare logger
+
 playlist=$1
+workspace=~/Desktop/automator-youtube-dl
 output_dir="playlist-$(date +%s)"
+youtube_dl_url=https://yt-dl.org/downloads/latest/youtube-dl
 ffmpeg_url=http://www.ffmpegmac.net/resources/SnowLeopard_Lion_Mountain_Lion_Mavericks_Yosemite_El-Captain_28.11.2016.zip
 
-# create and switch to our workspace
-cd ~/Desktop
-mkdir -p youtube
-cd youtube
+mkdir -p $workspace &amp;&amp; cd $workspace
 
-# make things a little easier
-PATH=$PATH:$PWD
+[[ $(uname) == "Darwin" ]] &amp;&amp; {
+	# audible logging for os x
+    logger=say
+	canopen=1
 
-# ensure ffmpeg is present
-[[ ! -f ffmpeg ]] &amp;&amp; {
-	rm ffmpeg ffprobe ffserver || true
-	curl --silent -L $ffmpeg_url -o ffmpeg.zip || {
-		say "unable to download f f m peg archive, exiting!"
-		exit 1
-	}
-	tar -xf ffmpeg.zip &amp;&amp; rm ffmpeg.zip || {
-		say "unable to extract f f m peg archive, exiting!"
-		exit 1
-	}
-}
+    # ensure ffmpeg is present
+    [[ -f ffmpeg &amp;&amp; -f ffserver &amp;&amp; -f ffprobe ]] || {
+        
+        # start from scratch
+        rm ff{mpeg,probe,server,mpeg.zip} || true
+        curl --silent -L $ffmpeg_url -o ffmpeg.zip || {
+            $logger "unable to download f f m peg archive, exiting!"
+            exit 1
+        }
+        tar -xf ffmpeg.zip
+		rm ffmpeg.zip
+    }    
+    # ensure youtube-dl is present
+    [[ -f youtube-dl ]] || {
+        curl --silent -L $youtube_dl_url -o youtube-dl || {
+            $logger "unable to download you tube d l, exiting!"
+            exit 1
+        }
+        chmod a+rx youtube-dl || {
+            $logger "unable to make you tube d l executable, exiting!"
+            exit 1
+        }
+    }
+} || {
+    logger=echo # stdout otherwise
+    canopen=0
 
-# ensure youtube-dl is present
-[[ ! -f youtube-dl ]] &amp;&amp; {
-	curl --silent -L https://yt-dl.org/downloads/latest/youtube-dl -o youtube-dl || {
-		say "unable to download you tube d l, exiting!"
-		exit 1
-	}
-	chmod a+rx youtube-dl || {
-		say "unable to make you tube d l executable, exiting!"
-		exit 1
-	}
-}
+    # search for globals instead
+    type ffmpeg &amp;&amp; type ffserver &amp;&amp; type ffprobe &amp;&amp; type youtube_dl || {
+        $logger "missing any of the following:" ff{mpeg,server,probe} youtube-dl
+    }
+} 
 
-# create the output dir
-mkdir $output_dir || {
-	say "unable to create output directory, exiting!"
-	exit 1
-}
+mkdir -p $output_dir &amp;&amp; cd $output_dir
 
-cd $output_dir || {
-	say "unable to change to output directory, exiting!"
-	exit 1
-}
-
-say "beginning you tube play list download, please wait..."
+PATH=$PATH:$PWD/..
 
 # attempt to download and transcode the given url
-youtube-dl \
-	--prefer-ffmpeg \
-	--quiet \
-	--no-warnings \
-	--no-progress \
-	--ignore-errors \
-	--no-color \
-	--yes-playlist \
-	--no-call-home \
-	--extract-audio \
-	--audio-format="mp3" \
-	--output="%(title)s.%(ext)s" \
-	-- $playlist || {
-		say "you tube play list download failed!"
-		exit 1
-	}
+$logger "beginning you tube play list download, please wait..."
+youtube-dl --prefer-ffmpeg --quiet \
+           --no-warnings --no-progress \
+           --ignore-errors --no-color \
+           --yes-playlist --no-call-home \
+           --extract-audio --audio-format="mp3" \
+           --output="%(title)s.%(ext)s" \
+           -- $playlist || {
+	$logger "you tube play list download failed"
+	exit 1
+}
 
-say "you tube play list download complete!"
-open $output_dir
+$logger "you tube play list download complete!"
+
+if [[ $canopen == "1" ]]; then
+    open $output_dir
+else
+    $logger "navigate to" $workspace/$output_dir
+fi
+
 exit 0</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
@@ -526,7 +528,7 @@ exit 0</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>527.000000:796.000000</string>
+				<string>527.000000:816.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -536,14 +538,14 @@ exit 0</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>4EAAF08C-C3C4-40E8-AD11-719DE4ED8874</key>
+		<key>4D9AEF11-A93D-4455-A15D-CD8C5C467FAB</key>
 		<dict>
 			<key>from</key>
 			<string>2E435FEA-BE61-462E-8D71-DE485E264405 - 2E435FEA-BE61-462E-8D71-DE485E264405</string>
 			<key>to</key>
 			<string>FE6D0374-436A-4CB0-BB1C-36DDF8A5A51E - FE6D0374-436A-4CB0-BB1C-36DDF8A5A51E</string>
 		</dict>
-		<key>777B88F4-52B2-459D-9DCA-04ADE994EC26</key>
+		<key>9E1200F0-9E5C-49BD-B656-BC44C3D8C612</key>
 		<dict>
 			<key>from</key>
 			<string>FE6D0374-436A-4CB0-BB1C-36DDF8A5A51E - FE6D0374-436A-4CB0-BB1C-36DDF8A5A51E</string>
