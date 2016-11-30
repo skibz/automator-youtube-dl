@@ -56,12 +56,9 @@ PATH=$PATH:$PWD/..
 # attempt to download and transcode the given url
 $logger "beginning you tube play list download, please wait..."
 youtube-dl --prefer-ffmpeg --quiet \
-           --no-warnings --no-progress \
-           --ignore-errors --no-color \
-           --yes-playlist --no-call-home \
-           --extract-audio --audio-format="mp3" \
-           --output="%(title)s.%(ext)s" \
-           -- $playlist || {
+           --no-warnings  --ignore-errors --no-color \
+           --yes-playlist --no-call-home --extract-audio \
+           --audio-format="mp3" --output="%(title)s.%(ext)s" -- $playlist || {
     $logger "you tube play list download failed"
     exit 1
 }
